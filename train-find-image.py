@@ -13,8 +13,8 @@ from matplotlib import pyplot as plt
 # TODO: refactor as function that receives two images
 MIN_MATCH_COUNT = 10
 
-img1 = cv2.imread('cards.png', 0)          # queryImage
-img2 = cv2.imread('sevenhearts.png', 0)    # trainImage
+img1 = cv2.imread('images/cards.png', 0)          # queryImage
+img2 = cv2.imread('images/sevenhearts.png', 0)    # trainImage
 
 # Initiate SIFT detector
 sift = cv2.xfeatures2d.SIFT_create()
@@ -51,7 +51,7 @@ if len(good) > MIN_MATCH_COUNT:
     img2 = cv2.polylines(img2, [np.int32(dst)], True, 255, 3, cv2.LINE_AA)
 
 else:
-    print("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT))
+    print("Not enough matches are found - %d/%d" % (len(good), MIN_MATCH_COUNT))
     matchesMask = None
 
 draw_params = dict(matchColor=(0, 255, 0),  # draw matches in green color

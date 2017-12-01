@@ -8,7 +8,7 @@ sys.path.append('/usr/local/Cellar/opencv/3.3.1_1/lib/python3.6/site-packages')
 import cv2
 import numpy as np
 
-filename = 'cards.png'
+filename = 'images/cards.png'
 img = cv2.imread(filename)
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
