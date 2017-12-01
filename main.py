@@ -3,34 +3,23 @@ Runs the card recognition application
 Author: Landon Wiedenman
 """
 
-import sys
-sys.path.append('/usr/local/Cellar/opencv/3.3.1_1/lib/python3.6/site-packages')
-import cv2
-import numpy as np
+from contour import contour_image
+from corner_detection import detect_corner
+from train_find_image import find_image
 # import RGB_slider
 
 
-# TODO: refactor into separate contouring file
-img = cv2.imread('images/cards_bw.jpg', 0)
-ret, thresh = cv2.threshold(img, 127, 255, 0)
-contours, hierarchy, _ = cv2.findContours(thresh, 1, 2)
+def main():
+    """ Runs the program """
 
-cnt = contours[0]
-M = cv2.moments(cnt)
-print(M)
-cv2.imshow('cards_bw', img)
-# print(cnt)
-# RGB_slider.image_slider() // Cool color slider
+    # Corner detection
+    # detect_corner('images/cards.png')
 
-# centroid
-cx = int(M['m10']/M['m00'])
-cy = int(M['m01']/M['m00'])
-print(cx)
-print(cy)
+    # TODO: Find contours in image
+    # contour_image()
 
-# contour area
-area = cv2.contourArea(cnt)
+    # Find image within another image
+    find_image('images/sevenhearts.png', 'images/cards.png')
 
-# contour perimeter
-perimeter = cv2.arcLength(cnt, True)
-print(perimeter)
+if __name__ == "__main__":
+    main()
