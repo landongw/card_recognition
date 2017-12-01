@@ -12,14 +12,14 @@ from train_find_image import find_image
 def main():
     """ Runs the program """
 
+    # Find image within another image
+    find_image('images/sevenhearts.png', 'images/cards.png')
+
     # Corner detection
-    # detect_corner('images/cards.png')
+    detect_corner('images/cards.png')
 
     # TODO: Find contours in image
     # contour_image()
-
-    # Find image within another image
-    find_image('images/sevenhearts.png', 'images/cards.png')
 
 if __name__ == "__main__":
     main()

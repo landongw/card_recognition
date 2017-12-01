@@ -64,4 +64,4 @@ def find_image(image_find_path, image_source_path):
     img3 = cv2.drawMatches(img1, kp1, img2, kp2, good, None, **draw_params)
 
     plt.imshow(img3, 'gray'), plt.show()
-    
+
