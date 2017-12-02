@@ -18,7 +18,7 @@ def main():
     # Corner detection
     detect_corner('images/cards.png')
 
-    # TODO: Find contours in image
+    # TODO: Find contours in image and show
     # contour_image()
 
 if __name__ == "__main__":
