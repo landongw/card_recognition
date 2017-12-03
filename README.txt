@@ -97,6 +97,41 @@ opencv_traincascade \
 -h 24
 
 
+FOURTH TRY:
+
+VEC GENERATION:
+
+opencv_createsamples \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/images/sevenhearts.png \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-maxxangle 0.1 \
+-maxyangle 0.1 \
+-maxzangle 0.1 \
+-h 75 \
+-w 100 \
+-show
+
+
+
+
+CASCADE TRAINING:
+
+opencv_traincascade \
+-data /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/cascade \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg2.txt \
+-numPos 30 \
+-numNeg 30 \
+-numStages 7 \
+-featureType HAAR \
+-minHitRate 0.999 \
+-maxFalseAlarmRate 0.4 \
+-w 75 \
+-h 100
+
+
+
 
 TROUBLSHOOTING DOCS:
 
