@@ -33,7 +33,7 @@ opencv_createsamples \
 -vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
 -img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/ace_of_hearts/ah1.png \
 -bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
--info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \
+-info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \  // GET RID OF THIS?
 -pngoutput \ // GET RID OF THIS?
 -maxxangle 0.1 \
 -maxyangle 0.1 \
@@ -44,12 +44,13 @@ SECOND TRY ON VEC FILE:
 
 opencv_createsamples \
 -vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
--img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/ace_of_hearts/ah1.png \
+-img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/images/sevenhearts.png \
 -bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
 -info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \
 -maxxangle 0.1 \
 -maxyangle 0.1 \
--maxzangle 0.1
+-maxzangle 0.1 \
+
 
 
 CASCADE TRAINING:
@@ -58,13 +59,46 @@ NOTE: must alter bg.txt file to contain full paths of images
 opencv_traincascade \
 -data /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/cascade \
 -vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
--bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg2.txt \
 -numPos 30 \
 -numNeg 30 \
--numStages 10 \
+-numStages 6 \
 -featureType HAAR \
 -minHitRate 0.999 \
 -maxFalseAlarmRate 0.1 \
 -w 24 \
 -h 24
 
+
+
+THIRD TRY:
+opencv_createsamples \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/images/sevenhearts.png \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \
+-maxxangle 0.1 \
+-maxyangle 0.1 \
+-maxzangle 0.1
+
+
+
+opencv_traincascade \
+-data /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/cascade \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg2.txt \
+-numPos 30 \
+-numNeg 30 \
+-numStages 5 \
+-featureType HAAR \
+-minHitRate 0.999 \
+-maxFalseAlarmRate 0.1 \
+-w 24 \
+-h 24
+
+
+
+TROUBLSHOOTING DOCS:
+
+https://stackoverflow.com/questions/16058080/how-to-train-cascade-properly
+http://answers.opencv.org/question/10872/cascade-training-error-opencv-244-train-dataset-for-temp-stage-can-not-filled-branch-training-terminated-cascade-classifier-cant-be-trained-check-the/
