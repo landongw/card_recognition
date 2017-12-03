@@ -28,3 +28,13 @@ img/neg/np27.png
 img/neg/np28.png
 img/neg/np29.png
 img/neg/np30.png
+img/neg/np31.png
+img/neg/np32.png
+img/neg/np33.png
+img/neg/np34.png
+img/neg/np35.png
+img/neg/np36.png
+img/neg/np37.png
+img/neg/np38.png
+img/neg/np39.png
+img/neg/np40.png

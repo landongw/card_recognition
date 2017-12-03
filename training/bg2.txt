@@ -28,3 +28,13 @@
 /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np28.png
 /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np29.png
 /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np30.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np31.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np32.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np33.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np34.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np35.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np36.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np37.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np38.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np39.png
+/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/neg/np40.png

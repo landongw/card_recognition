@@ -108,9 +108,8 @@ opencv_createsamples \
 -maxxangle 0.1 \
 -maxyangle 0.1 \
 -maxzangle 0.1 \
--h 75 \
--w 100 \
--show
+-w 20 \
+-h 30
 
 
 
@@ -121,14 +120,15 @@ opencv_traincascade \
 -data /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/cascade \
 -vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
 -bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg2.txt \
--numPos 30 \
--numNeg 30 \
+-numPos 40 \
+-numNeg 40 \
 -numStages 7 \
 -featureType HAAR \
--minHitRate 0.999 \
+-minHitRate 1 \
 -maxFalseAlarmRate 0.4 \
--w 75 \
--h 100
+-w 20 \
+-h 30
+
 
 
 

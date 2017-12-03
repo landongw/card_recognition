@@ -3,12 +3,12 @@
 <params>
   <stageType>BOOST</stageType>
   <featureType>HAAR</featureType>
-  <height>24</height>
-  <width>24</width>
+  <height>30</height>
+  <width>20</width>
   <stageParams>
     <boostType>GAB</boostType>
     <minHitRate>1.</minHitRate>
-    <maxFalseAlarm>5.0000000000000000e-01</maxFalseAlarm>
+    <maxFalseAlarm>4.0000000596046448e-01</maxFalseAlarm>
     <weightTrimRate>9.4999999999999996e-01</weightTrimRate>
     <maxDepth>1</maxDepth>
     <maxWeakCount>100</maxWeakCount></stageParams>
