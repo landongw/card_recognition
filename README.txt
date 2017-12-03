@@ -1,4 +1,4 @@
-THIS EXAMPLE SESSION SHOWS RUNNING TRAINING SET CREATION:
+THIS EXAMPLE SESSION SHOWS RUNNING TRAINING SET CREATION (MAY NOT WORK):
 
 Landons-MBP:card_recognition landonwiedenman$ opencv_createsamples -img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/ace_of_hearts/ah1.png -bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt -info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst -pngoutput -maxxangle 0.1 -maxyangle 0.1 -maxzangle 0.1
 Info file name: /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst
@@ -25,3 +25,46 @@ Open background image: /Users/landonwiedenman/Documents/lc101/hacker-problems/ca
 TODO:
 
 - Complete troubleshooting on new model training for playing cards
+
+
+CREATING POSITIVE SAMPLES IN VEC FILE:
+
+opencv_createsamples \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/ace_of_hearts/ah1.png \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \
+-pngoutput \ // GET RID OF THIS?
+-maxxangle 0.1 \
+-maxyangle 0.1 \
+-maxzangle 0.1
+
+
+SECOND TRY ON VEC FILE:
+
+opencv_createsamples \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-img /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/ace_of_hearts/ah1.png \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-info /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/img/annotations.lst \
+-maxxangle 0.1 \
+-maxyangle 0.1 \
+-maxzangle 0.1
+
+
+CASCADE TRAINING:
+NOTE: must alter bg.txt file to contain full paths of images
+
+opencv_traincascade \
+-data /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/cascade \
+-vec /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/positive.vec \
+-bg /Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/training/bg.txt \
+-numPos 30 \
+-numNeg 30 \
+-numStages 10 \
+-featureType HAAR \
+-minHitRate 0.999 \
+-maxFalseAlarmRate 0.1 \
+-w 24 \
+-h 24
+
