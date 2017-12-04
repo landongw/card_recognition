@@ -18,7 +18,7 @@ def main():
     # detect_corner('images/cards.png')
 
     # Find contours in image and show
-    contour_image()
+    contour_image('/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/images/cards.png')
 
 if __name__ == "__main__":
     main()
