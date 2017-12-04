@@ -7,32 +7,19 @@ import sys
 sys.path.append('/usr/local/Cellar/opencv/3.3.1_1/lib/python3.6/site-packages')
 import cv2
 import numpy as np
-# import RGB_slider
+from matplotlib import pyplot as plt
+
 
 # TODO: Finish this
 def contour_image():
     """ Finds contours within an image """
-    
-    img = cv2.imread('images/cards_bw.jpg', 0)
-    ret, thresh = cv2.threshold(img, 127, 255, 0)
-    contours, hierarchy, _ = cv2.findContours(thresh, 1, 2)
 
-    cnt = contours[0]
-    M = cv2.moments(cnt)
-    print(M)
-    cv2.imshow('cards_bw', img)
-    # print(cnt)
-    # RGB_slider.image_slider() // Cool color slider
 
-    # centroid
-    cx = int(M['m10']/M['m00'])
-    cy = int(M['m01']/M['m00'])
-    print(cx)
-    print(cy)
+    img = cv2.imread('/Users/landonwiedenman/Documents/lc101/hacker-problems/card_recognition/images/cards.png')
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    ret, thresh = cv2.threshold(gray, 127, 255, 0)
+    image, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-    # contour area
-    area = cv2.contourArea(cnt)
+    img = cv2.drawContours(img, contours, -1, (0, 255, 0), 3)
 
-    # contour perimeter
-    perimeter = cv2.arcLength(cnt, True)
-    print(perimeter)
+    plt.imshow(img), plt.show()
